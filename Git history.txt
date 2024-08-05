@@ -1,0 +1,21 @@
+V23.1
+1.修改def check_version(self)版本號提取邏輯，只取主版本號
+*pyinstaller --onefile --windowed --add-data "format.ico;." --icon=format.ico --noupx "Map confirm_V23.1.py"
+
+V23.2
+1.通過設定font.setBold(True) UI字體為'粗體'
+*pyinstaller --onefile --windowed --add-data "format.ico;." --icon=format.ico --noupx "Map confirm_V23.2.py"
+
+V23.3
+1.修改def performDefectChipSummary(self)方法中有關folder_path的寫法
+1-1.使用了自定義的QFileDialog而不是QFileDialog.getExistingDirectory
+1-2.設置了對話框的模式,允許顯示文件夾內容
+1-3.提供了更清晰的標題,指導用戶選擇正確的文件夾
+*pyinstaller --onefile --windowed --add-data "format.ico;." --icon=format.ico --noupx "Map confirm_V23.3.py"
+
+V23.4
+1.修改了關於performDefectChipSummary的寫法
+1-1.移除了工作表數量的判斷，現在直接選擇第一個工作表，不再詢問使用者
+1-2.移除了使用者確認執行的對話框
+1-3.簡化了工作表選擇邏輯，直接使用 sheet_name = map_workbook.sheetnames[0] 來選擇第一個工作表
+*pyinstaller --onefile --windowed --add-data "format.ico;." --icon=format.ico --noupx "Map confirm_V23.4.py"
